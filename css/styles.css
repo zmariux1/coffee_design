@@ -1,0 +1,218 @@
+body {
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+  background: rgba(238,238,240,255);
+}
+
+/* Theme color */
+
+
+body, h1, h2, h3, h4, h5, h6, p, a, span, div, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 90%;
+}
+
+.navbar {
+  background-color: rgba(8, 8, 8, 0.8);
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar-toggler {
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 80%;
+  margin: 0 auto;
+}
+.navbar-brand img {
+  width: 50px; /* Adjust the image size if needed */
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+}
+.navbar-collapse {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 2rem; /* Adjust the margin if needed */
+  display: flex;
+  gap: 10px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background-color: #555;
+}
+
+/* Social links styling
+.nav-item span.fa-stack span.fa-stack-1x {
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: blue;
+  height: 20px;
+  width: 20px;
+} */
+
+.round_parent_icon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(131, 63, 0);
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+
+}
+
+.round_parent_icon i {
+  font-size: 110%;
+}
+.round_parent_icon a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+/* Media queries for different screen sizes */
+/* @media (min-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+} */
+
+
+
+
+.hero {
+  display: flex;
+  position: relative;
+}
+
+.emptyImgSpace {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+.emptyImgSpace img {
+  position: absolute; /* adaugă această proprietate */
+  top: 0; /* poziționează imaginea în colțul de sus stânga */
+  left: 0; /* poziționează imaginea în colțul de sus stânga */
+  width: 100%; /* face imaginea să aibă aceeași lățime ca div-ul */
+  height: 100%; /* face imaginea să aibă aceeași înălțime ca div-ul */
+  object-fit: cover; /* face imaginea să se adapteze la dimensiunile div-ului */
+  overflow: hidden; /* ascunde orice parte a imaginii care depășește dimensiunile div-ului */
+  z-index: 10;
+}
+.retractableEffect {
+  background: rgba(238,238,240,255);
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transition: width 1.2s ease-in-out; /* adaugă această proprietate */
+}
+
+
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  height: 90vh;
+  font-size: 150%;
+  padding: 5vh;
+  z-index: 12;
+  background: rgba(238, 238, 240, 0.87);
+
+}
+
+.heroContainer h1 {
+  font-size: 260%;
+  text-align: center;
+}
+
+.heroContainer h3 {
+  font-weight: 500;
+  text-align: center;
+}
+
+.heroContainer button {
+  font-size: 100%;
+  padding: 15px 40px;
+  border-radius: 10PX;
+  border: #555 2ps solid;
+  box-shadow: none;
+  margin-top: 5vh;
+  background: rgba(238,238,240,255);
+
+}
+
+@media (min-width: 600px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+  .emptyImgSpace {
+    position: relative;
+  }
+  .heroContainer {
+    align-items: baseline;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .heroContainer h1 {
+    text-align:left;
+  }
+  
+  .heroContainer h3 {
+    text-align: left;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 100%;
+  }
+}
